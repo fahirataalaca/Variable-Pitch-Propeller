@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variable Pitch Propeller Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         .section {
             text-align: center;
+            padding: 20px;
         }
 
         .section h2 {
@@ -14,7 +20,8 @@
         }
 
         .section p {
-            font-size: 16px; /* Same as list items */
+            font-size: 16px;
+            padding: 10px;
         }
 
         body {
@@ -43,21 +50,30 @@
             margin-bottom: 20px;
         }
 
+        .title h1 {
+            font-family: 'Lato', sans-serif;
+        }
+
         nav {
             text-align: center;
             margin-top: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
             margin: 0 15px;
             color: #10223b;
             text-decoration: none;
-            font-size: 18px;
-            transition: color 0.3s ease;
+            font-size: 16px;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
             color: red;
+            font-size: 18px;
         }
 
         .horizontal-line {
@@ -91,7 +107,7 @@
 
         .image-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             justify-items: center;
             margin-top: 20px;
@@ -99,15 +115,20 @@
 
         .image-grid img {
             width: 100%;
-            height: 300px; /* Make images bigger */
-            object-fit: cover; /* Ensure images cover the area */
+            height: 300px;
+            object-fit: cover;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.03);
         }
 
         @media (min-width: 768px) {
             .image-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2 images per row on larger screens */
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -140,8 +161,7 @@
                 <li>▻ In our last prototype test, the propeller broke due to the thin and indurable structure of the propeller housing. To solve this problem, we are working on strengthening the propeller housing design and we switched form PLA to PETG filament in order to ensure that our new propeller design is stronger when compared to the old version </li>
                 <li>▻ We are working on the electronics of our design where we try to ensure that the step motor has microstepping and works properly</li>
                 <li>▻ We are working on the propeller blade designs in order to accuratly examine the tuburcle effect</li>
-                <li>▻  </li>
-                <li>▻  </li>
+            
             </p>
         </div>
 
@@ -163,5 +183,3 @@
     </div>
 </body>
 </html>
-
-
