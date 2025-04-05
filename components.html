@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Components</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+            height: 100%;
+            overflow-y: auto; /* Ensures scrolling if content overflows */
+        }
+
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #34495e;
+            color: #10223b;
+            height: 100%;
+            overflow-y: auto; /* Enables vertical scrolling */
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #d4dce2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .title h1 {
+            font-family: 'Lato', sans-serif;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #333000;
+            padding: 5px 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: red;
+            font-size: 16px;
+        }
+
+        .horizontal-line {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .horizontal-line::before {
+            content: "_____________________________________________________________________________________________";
+            display: block;
+            text-align: center;
+        }
+
+        .section {
+            text-align: center;
+            padding: 1px;
+        }
+
+        .section h2 {
+            font-size: 24px;
+        }
+
+        .section p {
+            font-size: 16px;
+            padding: 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Project Components</h1>
+        </div>
+
+        <p class="horizontal-line"></p>
+
+        <nav>
+            <a href="design.html">Design Development</a> &vert;
+            <a href="components.html">Project Components</a> &vert;
+            <a href="testing.html">Prototype Testing</a> &vert;
+            <a href="document.html">Additional Information</a>
+        </nav>
+
+        <p class="horizontal-line"></p>
+
+        <div class="section">
+            <h2>Key Components</h2>
+            <p>The following are the primary components used in the variable pitch propeller project:</p>
+            <ul>
+                <li><strong>Stepper Motor (NEMA 17 HS4401)</strong> - The primary actuator for the propeller's pitch adjustment.</li>
+                <li><strong>DRV8825 Driver</strong> - A microstepping driver used to control the stepper motor.</li>
+                <li><strong>Li-ion Batteries</strong> - Compact, rechargeable power source for the motor and electronics.</li>
+                <li><strong>Arduino Uno</strong> - The microcontroller responsible for controlling the stepper motor.</li>
+                <li><strong>3D-Printed Propeller</strong> - The propeller blades and housing designed using Fusion 360 and printed with PETG for durability.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Additional Components</h2>
+            <p>In addition to the core components, the project also includes sensors, wiring, and a control circuit to ensure smooth operation during testing. These components help facilitate proper communication between the system and ensure optimal functioning of the propeller during flight or wind tunnel tests.</p>
+        </div>
+
+    </div>
+</body>
+</html>
 
