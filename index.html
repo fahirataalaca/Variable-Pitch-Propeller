@@ -17,6 +17,7 @@
       background-color: #34495e;
       color: #10223b;
       line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     .container {
@@ -77,6 +78,10 @@
     .section {
       text-align: center;
       padding: 10px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      background-color: #e0e0e0; /* Gray tone for all sections */
+      transition: background-color 0.3s;
     }
 
     .section h2 {
@@ -127,20 +132,50 @@
       transform: scale(1.03);
     }
 
-    .progress-section {
-      background-color: #c8d9e4;
-      border-radius: 12px;
-      padding: 20px;
+    /* Dark mode toggle button */
+    .dark-mode-button {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      padding: 10px 15px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
     }
 
-    @media (min-width: 768px) {
-      .image-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    .dark-mode-button:hover {
+      background-color: #555;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+    }
+
+    body.dark-mode .container {
+      background: #34495e;
+    }
+
+    body.dark-mode .section {
+      background-color: #34495e;
+      color: #ecf0f1;
+    }
+
+    body.dark-mode nav {
+      background-color: #333000;
+    }
+
+    body.dark-mode .footer {
+      background-color: #333;
     }
   </style>
 </head>
 <body>
+  <button class="dark-mode-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
   <div class="container">
     <div class="title">
       <h1>Variable Pitch Propeller Project</h1>
@@ -159,7 +194,7 @@
 
     <div class="section">
       <h2>Our Mission</h2>
-      <p>Our mission in this project is to investigate and examine the effects of the small tubercles on the leading edge of the propeller blades. We also adapted the the idea of tuburcles to variable pitch propellers, aiming determine their effects on variable pitch propellers. In this project, we combine biomimicry and propellers in order to enhance the propeller design and achieve more efficent propellers. We are designing the propeller from Fusion 360 and printing it with 3D printers.</p>
+      <p>Our mission in this project is to investigate and examine the effects of the small tubercles on the leading edge of the propeller blades. We also adapted the the idea of tuburcles to variable pitch propellers, aiming determine their effects on variable pitch propellers. In this project, we combine biomimicry and propellers in order to enhance the propeller design and achieve more efficient propellers. We are designing the propeller from Fusion 360 and printing it with 3D printers.</p>
     </div>
 
     <div class="section">
@@ -167,12 +202,13 @@
       <p>
         <li>▻ In our last prototype test, the propeller broke due to the thin and indurable structure of the propeller housing. To solve this problem, we are working on strengthening the propeller housing design and we switched form PLA to PETG filament in order to ensure that our new propeller design is stronger when compared to the old version </li>
         <li>▻ We are working on the electronics of our design where we try to ensure that the step motor has microstepping and works properly</li>
-        <li>▻ We are working on the propeller blade designs in order to accuratly examine the tuburcle effect</li>
-       
+        <li>▻ We are working on the propeller blade designs in order to accurately examine the tuburcle effect</li>
+        <li>▻ </li>
+        <li>▻ </li>
       </p>
     </div>
 
-    <div class="section progress-section">
+    <div class="section">
       <h2>Current Progress At the Project</h2>
       <div class="image-grid">
         <img src="IMG-20250330-WA0065.jpg" alt="Component 1">
@@ -188,6 +224,12 @@
       <p>Email: <a href="mailto:ata.alaca@hisarschool.k12.tr">ata.alaca@hisarschool.k12.tr</a></p>
     </div>
   </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
 
