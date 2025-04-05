@@ -1,185 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variable Pitch Propeller Documentation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Variable Pitch Propeller Documentation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .section {
-            text-align: center;
-            padding: 20px;
-        }
+    body {
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #34495e;
+      color: #10223b;
+    }
 
-        .section h2 {
-            font-size: 24px;
-        }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      background: #d4dce2;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-        .section p {
-            font-size: 16px;
-            padding: 10px;
-        }
+    .title {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
 
-        body {
-            font-family: Georgia, serif;
-            margin: 0;
-            padding: 0;
-            background-color: #34495e;
-            color: #10223b;
-        }
+    .title h1 {
+      font-family: 'Lato', sans-serif;
+    }
 
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background: #d4dce2;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    nav {
+      text-align: center;
+      margin: 20px auto;
+      padding: 8px;
+      background-color: #333000;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      width: fit-content;
+    }
 
-        .title {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
 
-        .title h1 {
-            font-family: 'Lato', sans-serif;
-        }
+    nav a:hover {
+      color: red;
+    }
 
-        nav {
-            text-align: center;
-            margin-top: 20px;
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    .horizontal-line {
+      text-align: center;
+      margin: 10px 0;
+    }
 
-        nav a {
-            margin: 0 15px;
-            color: #10223b;
-            text-decoration: none;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
+    .horizontal-line::before {
+      content: "_____________________________________________________________________________________________";
+      display: block;
+      text-align: center;
+    }
 
-        nav a:hover {
-            color: red;
-            font-size: 18px;
-        }
+    .section {
+      text-align: center;
+      padding: 10px;
+    }
 
-        .horizontal-line {
-            text-align: center;
-            margin: 10px 0;
-        }
+    .section:nth-child(odd) {
+      background-color: #e6ecf0;
+    }
 
-        .horizontal-line::before {
-            content: "_____________________________________________________________________________________________";
-            display: block;
-            text-align: center;
-        }
+    .section:nth-child(even) {
+      background-color: #d0d8dd;
+    }
 
-        .footer {
-            text-align: center;
-            margin-top: 10px;
-            background-color: #333;
-            color: white;
-            border-radius: 0 0 8px 8px;
-            padding: 10px;
-        }
+    .section h2 {
+      font-size: 24px;
+    }
 
-        .footer p a {
-            color: #fff;
-            text-decoration: none;
-        }
+    .section p {
+      font-size: 16px;
+      padding: 4px;
+    }
 
-        .footer h3 {
-            margin-bottom: 10px;
-        }
+    .footer {
+      text-align: center;
+      margin-top: 10px;
+      background-color: #333;
+      color: white;
+      border-radius: 0 0 8px 8px;
+      padding: 10px;
+    }
 
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            justify-items: center;
-            margin-top: 20px;
-        }
+    .footer p a {
+      color: #fff;
+      text-decoration: none;
+    }
 
-        .image-grid img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
+    .footer h3 {
+      margin-bottom: 10px;
+    }
 
-        .image-grid img:hover {
-            transform: scale(1.03);
-        }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-items: center;
+      margin-top: 20px;
+    }
 
-        @media (min-width: 768px) {
-            .image-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
+    .image-grid img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .image-grid img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (min-width: 768px) {
+      .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="title">
-            <h1>Variable Pitch Propeller Project</h1>
-        </div>
-
-        <p class="horizontal-line"></p>
-
-        <nav>
-            <a href="design.html">Design Development</a> &vert;
-            <a href="components">Project Components</a> &vert;
-            <a href="testing.html">Prototype Testing</a> &vert;
-            <a href="document.html">Additional Information</a>
-        </nav>
-
-        <p class="horizontal-line"></p>
-
-        <div class="section">
-            <h2>Our Mission</h2>
-            <p>Our mission in this project is to investigate and examine the effects of the small tubercles on the leading edge of the propeller blades. We also adapted the the idea of tuburcles to variable pitch propellers, aiming determine their effects on variable pitch propellers. In this project, we combine biomimicry and propellers in order to enhance the propeller design and achieve more efficent propellers. We are designing the propeller from Fusion 360 and printing it with 3D printers.</p>
-        </div>
-
-         <div class="section">
-            <h2>What We are Currently Working On</h2>
-            <p>
-                <li>▻ In our last prototype test, the propeller broke due to the thin and indurable structure of the propeller housing. To solve this problem, we are working on strengthening the propeller housing design and we switched form PLA to PETG filament in order to ensure that our new propeller design is stronger when compared to the old version </li>
-                <li>▻ We are working on the electronics of our design where we try to ensure that the step motor has microstepping and works properly</li>
-                <li>▻ We are working on the propeller blade designs in order to accuratly examine the tuburcle effect</li>
-            
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Current Progress At the Project</h2>
-            <div class="image-grid">
-                <img src="IMG-20250330-WA0065.jpg" alt="Component 1">
-                <img src="IMG-20250330-WA0017 (1).jpg" alt="Component 2">
-                <img src="image3.jpg" alt="Component 3">
-                <img src="20250405_123240.jpg" alt="Component 4">
-            </div>
-        </div>
-
-        <div class="footer">
-            <h3>Feel Free to Access Me</h3>
-            <p>If you have any questions or would like to connect, feel free to reach out!</p>
-            <p>Email: <a href="mailto:ata.alaca@hisarschool.k12.tr">ata.alaca@hisarschool.k12.tr</a></p>
-        </div>
+  <div class="container">
+    <div class="title">
+      <h1>Variable Pitch Propeller Project</h1>
     </div>
+
+    <p class="horizontal-line"></p>
+
+    <nav>
+      <a href="design.html">Design Development</a> &vert;
+      <a href="components">Project Components</a> &vert;
+      <a href="testing.html">Prototype Testing</a> &vert;
+      <a href="document.html">Additional Information</a>
+    </nav>
+
+    <p class="horizontal-line"></p>
+
+    <div class="section">
+      <h2>Our Mission</h2>
+      <p>Our mission in this project is to investigate and examine the effects of the small tubercles on the leading edge of the propeller blades. We also adapted the the idea of tuburcles to variable pitch propellers, aiming determine their effects on variable pitch propellers. In this project, we combine biomimicry and propellers in order to enhance the propeller design and achieve more efficent propellers. We are designing the propeller from Fusion 360 and printing it with 3D printers.</p>
+    </div>
+
+    <div class="section">
+      <h2>What We are Currently Working On</h2>
+      <p>
+        <li>▻ In our last prototype test, the propeller broke due to the thin and indurable structure of the propeller housing. To solve this problem, we are working on strengthening the propeller housing design and we switched form PLA to PETG filament in order to ensure that our new propeller design is stronger when compared to the old version </li>
+        <li>▻ We are working on the electronics of our design where we try to ensure that the step motor has microstepping and works properly</li>
+        <li>▻ We are working on the propeller blade designs in order to accuratly examine the tuburcle effect</li>
+        <li>▻ </li>
+        <li>▻ </li>
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Current Progress At the Project</h2>
+      <div class="image-grid">
+        <img src="IMG-20250330-WA0065.jpg" alt="Component 1">
+        <img src="IMG-20250330-WA0017 (1).jpg" alt="Component 2">
+        <img src="image3.jpg" alt="Component 3">
+        <img src="20250405_123240.jpg" alt="Component 4">
+      </div>
+    </div>
+
+    <div class="footer">
+      <h3>Feel Free to Access Me</h3>
+      <p>If you have any questions or would like to connect, feel free to reach out!</p>
+      <p>Email: <a href="mailto:ata.alaca@hisarschool.k12.tr">ata.alaca@hisarschool.k12.tr</a></p>
+    </div>
+  </div>
 </body>
 </html>
