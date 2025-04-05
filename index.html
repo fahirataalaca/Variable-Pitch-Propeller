@@ -68,11 +68,11 @@
 
         .footer {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 10px;
             background-color: #333;
             color: white;
             border-radius: 0 0 8px 8px;
-            padding: 20px;
+            padding: 10px;
         }
 
         .footer p a {
@@ -86,23 +86,23 @@
 
         .image-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr); /* 2 images per row */
             gap: 20px;
             justify-items: center;
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
-              .image-grid img {
-            width: 200px;  /* Set a fixed width */
-            height: 200px; /* Set a fixed height */
-            object-fit: cover; /* Ensure the image covers the area without distortion */
+        .image-grid img {
+            width: 100%;
+            height: 300px; /* Make images bigger */
+            object-fit: cover; /* Ensure images cover the area */
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         @media (min-width: 768px) {
             .image-grid {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(2, 1fr); /* 2 images per row on larger screens */
             }
         }
     </style>
@@ -130,12 +130,12 @@
         </div>
 
         <div class="section">
-            <h2>Component Gallery</h2>
+            <h2>Current Progress At the Project</h2>
             <div class="image-grid">
-                <img src="image1.jpg" alt="Component 1">
-                <img src="IMG-20250330-WA0064.jpg" alt="Component 2">
+                <img src="IMG-20250330-WA0065" alt="Component 1">
+                <img src="IMG-20250330-WA0017 (1)" alt="Component 2">
                 <img src="image3.jpg" alt="Component 3">
-                <img src="IMG-20250330-WA0065.jpg" alt="Component 4">
+                <img src="20250405_123240.jpg" alt="Component 4">
             </div>
         </div>
 
