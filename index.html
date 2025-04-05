@@ -10,11 +10,11 @@
         }
 
         .section h2 {
-            font-size: 24px; /* Make h2 slightly smaller */
+            font-size: 24px;
         }
 
         .section p {
-            font-size: 18px; /* Make p slightly smaller */
+            font-size: 18px;
         }
 
         body {
@@ -44,12 +44,12 @@
         }
 
         nav {
-            text-align: center; /* Center the nav links */
+            text-align: center;
             margin-top: 20px;
         }
 
         nav a {
-            margin: 0 15px; /* Add space between links */
+            margin: 0 15px;
             color: #10223b;
             text-decoration: none;
             font-size: 16px;
@@ -84,20 +84,37 @@
             margin-bottom: 10px;
         }
 
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-items: center;
+            margin-top: 10px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (min-width: 768px) {
+            .image-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-
-
         <div class="title">
             <h1>Variable Pitch Propeller Project</h1>
         </div>
 
-        
         <p class="horizontal-line"></p>
 
-       
         <nav>
             <a href="design.html">Design Development</a> &vert;
             <a href="components">Project Components</a> &vert;
@@ -105,23 +122,30 @@
             <a href="document.html">Additional Information</a>
         </nav>
 
-
         <p class="horizontal-line"></p>
 
-  
         <div class="section">
             <h2>Our Mission</h2>
             <p>Our mission in this project is to research and examine the effects of the tubercle effect on variable pitch propellers.</p>
         </div>
 
+        <div class="section">
+            <h2>Component Gallery</h2>
+            <div class="image-grid">
+                <img src="image1.jpg" alt="Component 1">
+                <img src="IMG-20250330-WA0064.jpg" alt="Component 2">
+                <img src="image3.jpg" alt="Component 3">
+                <img src="IMG-20250330-WA0065.jpg" alt="Component 4">
+            </div>
+        </div>
 
         <div class="footer">
             <h3>Feel Free to Access Me</h3>
             <p>If you have any questions or would like to connect, feel free to reach out!</p>
             <p>Email: <a href="mailto:ata.alaca@hisarschool.k12.tr">ata.alaca@hisarschool.k12.tr</a></p>
         </div>
-
     </div>
 </body>
 </html>
+
 
