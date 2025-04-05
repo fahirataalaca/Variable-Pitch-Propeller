@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design & Development Process</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .section {
+            text-align: center;
+            padding: 1px; /* Reduced padding */
+        }
+
+        .section h2 {
+            font-size: 24px;
+        }
+
+        .section p {
+            font-size: 16px;
+            padding: 1px; /* Reduced padding */
+        }
+
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #34495e;
+            color: #10223b;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #d4dce2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .title h1 {
+            font-family: 'Lato', sans-serif;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #333000; /* Updated background color */
+            padding: 5px 10px; /* Reduced padding */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white; /* Updated text color */
+            text-decoration: none;
+            font-size: 14px; /* Reduced font size */
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: red;
+            font-size: 16px;
+        }
+
+        .horizontal-line {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .horizontal-line::before {
+            content: "_____________________________________________________________________________________________";
+            display: block;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Design & Development Process</h1>
+        </div>
+
+        <p class="horizontal-line"></p>
+
+        <nav>
+            <a href="design.html">Design Development</a> &vert;
+            <a href="components">Project Components</a> &vert;
+            <a href="testing.html">Prototype Testing</a> &vert;
+            <a href="document.html">Additional Information</a>
+        </nav>
+
+        <p class="horizontal-line"></p>
+
+        <div class="section">
+            <h2>Design & Development Overview</h2>
+            <p>The design and development process of our variable pitch propeller focuses on creating an innovative solution to optimize the performance of propellers. We started by researching the effects of tubercles on the blades and their potential impact on the variable pitch design. Our design combines both theoretical and practical approaches to ensure a well-balanced, efficient, and high-performing propeller.</p>
+        </div>
+
+        <div class="section">
+            <h2>Conceptualization</h2>
+            <p>Our first step was to develop conceptual designs using Fusion 360. These designs incorporate tubercles, which are inspired by the natural design of humpback whale fins, to see how they could improve aerodynamics and efficiency in the propeller’s performance. We used 3D modeling software to iterate multiple designs before finalizing the blueprint for 3D printing.</p>
+        </div>
+
+        <div class="section">
+            <h2>Material Selection</h2>
+            <p>For the material, we originally chose PLA for prototyping, but we later switched to PETG filament to enhance the durability and strength of the propeller housing. PETG’s higher temperature resistance and impact strength make it more suitable for the functional demands of the propeller system.</p>
+        </div>
+
+        <div class="section">
+            <h2>Testing & Iteration</h2>
+            <p>After creating our first prototype, we tested the propeller under controlled conditions. The initial tests provided valuable insights, especially regarding the housing’s fragility. With this feedback, we redesigned the housing and implemented the stronger PETG material to prevent breakage. We are now in the process of refining the stepper motor control system for smoother operation during variable pitch adjustments.</p>
+        </div>
+
+    </div>
+</body>
+</html>
 
