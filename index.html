@@ -8,7 +8,7 @@
         .section {
             text-align: center;
         }
-        
+
         .section h2 {
             font-size: 24px; /* Make h2 slightly smaller */
         }
@@ -34,8 +34,13 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .header {
-            display: none; /* Remove the header */
+        .title {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         nav {
@@ -50,8 +55,15 @@
             font-size: 16px;
         }
 
-        .section {
-            margin: 20px 0;
+        .horizontal-line {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .horizontal-line::before {
+            content: "_____________________________________________________________________________________________";
+            display: block;
+            text-align: center;
         }
 
         .footer {
@@ -77,34 +89,31 @@
 <body>
     <div class="container">
 
-        <p>_____________________________________________________________________________________________</p>
+
+        <div class="title">
+            <h1>Variable Pitch Propeller Project</h1>
+        </div>
+
+        
+        <p class="horizontal-line"></p>
+
+       
         <nav>
             <a href="design.html">Design Development</a> &vert;
             <a href="components">Project Components</a> &vert;
             <a href="testing.html">Prototype Testing</a> &vert;
-            <a href="document.html">Additional Information</a> &vert;
+            <a href="document.html">Additional Information</a>
         </nav>
-        <p>_____________________________________________________________________________________________</p>
 
+
+        <p class="horizontal-line"></p>
+
+  
         <div class="section">
             <h2>Our Mission</h2>
             <p>Our mission in this project is to research and examine the effects of the tubercle effect on variable pitch propellers.</p>
         </div>
-        
-        <div class="section">
-            <h2>Design</h2>
-            <p></p>
-        </div>
-        
-        <div class="section">
-            <h2>Components</h2>
-            <p></p>
-        </div>
-        
-        <div class="section">
-            <h2>Testing</h2>
-            <p></p>
-        </div>
+
 
         <div class="footer">
             <h3>Feel Free to Access Me</h3>
@@ -115,3 +124,4 @@
     </div>
 </body>
 </html>
+
