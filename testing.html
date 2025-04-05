@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Testing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+            height: 100%;
+            overflow-y: auto; /* Ensures scrolling if content overflows */
+        }
+
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #34495e;
+            color: #10223b;
+            height: 100%;
+            overflow-y: auto; /* Enables vertical scrolling */
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #d4dce2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .title h1 {
+            font-family: 'Lato', sans-serif;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #333000;
+            padding: 5px 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: red;
+            font-size: 16px;
+        }
+
+        .horizontal-line {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .horizontal-line::before {
+            content: "_____________________________________________________________________________________________";
+            display: block;
+            text-align: center;
+        }
+
+        .section {
+            text-align: center;
+            padding: 1px;
+        }
+
+        .section h2 {
+            font-size: 24px;
+        }
+
+        .section p {
+            font-size: 16px;
+            padding: 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Prototype Testing</h1>
+        </div>
+
+        <p class="horizontal-line"></p>
+
+        <nav>
+            <a href="design.html">Design Development</a> &vert;
+            <a href="components.html">Project Components</a> &vert;
+            <a href="testing.html">Prototype Testing</a> &vert;
+            <a href="index.html">Maimn Page</a>
+        </nav>
+
+        <p class="horizontal-line"></p>
+
+        <div class="section">
+            <h2>Test Overview</h2>
+            <p>The testing phase of the project focuses on evaluating the functionality of the variable pitch propeller under controlled conditions. This includes spinning the propeller with a drill at 200rpm for currently. After we reach success in the first step, we will mount the propeller on linear motion bearings and use a brushless DC motor instead of a drill. We will measure the output rpm with a hall sensor and a magnet and we will measure the load the propeller creates with a load sensor.</p>
+        </div>
+
+        <div class="section">
+            <h2>Test Results</h2>
+            <p>During our first round of tests, the propeller broke due to structural issues due. Material choice for the housing wrong. We switched from PLA filament to PETG and strengthtend our design. After switching to PETG filament and reinforcing the design, the results showed significant improvements in both strength and performance.</p>
+        </div>
+
+        <div class="section">
+            <h2>Future Testing Plans</h2>
+            <p>Our next steps involve refining the electronic control system to ensure smooth operation of the stepper motor during pitch adjustments. Additionally, we will mount the propeller on linear motion bearings and use a brushless DC motor instead of a drill. We will measure the output rpm with a hall sensor and a magnet and we will measure the load the propeller creates with a load censor.</p>
+        </div>
+
+    </div>
+</body>
+</html>
 
