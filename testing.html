@@ -9,7 +9,7 @@
         html {
             scroll-behavior: smooth;
             height: 100%;
-            overflow-y: auto; /* Ensures scrolling if content overflows */
+            overflow-y: auto;
         }
 
         body {
@@ -19,7 +19,7 @@
             background-color: #34495e;
             color: #10223b;
             height: 100%;
-            overflow-y: auto; /* Enables vertical scrolling */
+            overflow-y: auto;
         }
 
         .container {
@@ -91,6 +91,27 @@
             padding: 1px;
         }
 
+        .media-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .media-item {
+            flex: 1 1 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .media-item video,
+        .media-item img {
+            max-width: 480px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -120,50 +141,42 @@
             <p>During our first round of tests, the propeller broke due to structural issues due. Material choice for the housing wrong. We switched from PLA filament to PLA+ and strengthtend our design. After switching to PLA+ filament and reinforcing the design, the results showed significant improvements in both strength and performance.</p>
         </div>
 
-
-            
-        <div class="section" style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
-            <div>
-                <video width="480" height="270" muted autoplay loop style="border-radius: 8px;">
+        <div class="media-row">
+            <div class="media-item">
+                <video muted autoplay loop>
                     <source src="VID-20250330-WA0081.mp4" type="video/mp4">
                 </video>
             </div>
-            <div>
-                <img src="IMG-20250330-WA0035.jpg" style="max-width: 480px; max-height: 270px; width: auto; height: auto; border-radius: 8px;">
+            <div class="media-item">
+                <img src="IMG-20250330-WA0035.jpg" alt="Test 1 Image">
             </div>
         </div>
 
-
-         <div class="section">
+        <div class="section">
             <h2>Second Test Results</h2>
-            <p>During our second round of tests, the shaft and the nuts which were connecting the propeller and the motor were unreliable. Even with strengthened material and proper nut housing, the housings deformed during the test and obstructed the propeller from revolving smoothly. In order to tackle this issue, we decided to increase our nut surface area. This would inrcrease the surface area of both the houisng and the nuts. Thus, the pressure on the houisng will significantly decrease and the housing will not deform, leading to smooth rotation of propeller..</p>
+            <p>During our second round of tests, the shaft and the nuts which were connecting the propeller and the motor were unreliable. Even with strengthened material and proper nut housing, the housings deformed during the test and obstructed the propeller from revolving smoothly. In order to tackle this issue, we decided to increase our nut surface area. This would inrcrease the surface area of both the houisng and the nuts. Thus, the pressure on the houisng will significantly decrease and the housing will not deform, leading to smooth rotation of propeller.</p>
         </div>
 
-
-        <div class="section" style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap;">
-            <div>
-                <video width="480" height="270" muted autoplay loop style="border-radius: 8px;">
+        <div class="media-row">
+            <div class="media-item">
+                <video muted autoplay loop>
                     <source src="20250424_144106.mp4" type="video/mp4">
                 </video>
             </div>
-            <div>
-                <video width="480" height="270" muted autoplay loop style="border-radius: 8px;">
+            <div class="media-item">
+                <video muted autoplay loop>
                     <source src="20250424_143940.mp4" type="video/mp4">
                 </video>
             </div>
-            <div>
-                <img src="20250502_223718.jpg" style="max-width: 480px; max-height: 270px; width: auto; height: auto; border-radius: 8px;">
+            <div class="media-item">
+                <img src="20250502_223718.jpg" alt="Test 2 Image">
             </div>
-
-
-
-        
+        </div>
 
         <div class="section">
             <h2>Future Testing Plans</h2>
             <p>Our next steps involve refining the electronic control system to ensure smooth operation of the stepper motor during pitch adjustments. Additionally, we will mount the propeller on linear motion bearings and use a brushless DC motor instead of a drill. We will measure the output rpm with a hall sensor and a magnet and we will measure the load the propeller creates with a load censor.</p>
         </div>
-
     </div>
 </body>
 </html>
