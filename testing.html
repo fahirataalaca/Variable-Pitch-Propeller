@@ -94,20 +94,24 @@
         .media-row {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             gap: 20px;
             flex-wrap: wrap;
             margin-top: 15px;
             margin-bottom: 25px;
         }
 
+        .media-item {
+            max-width: 100%;
+        }
+
         .media-item video,
         .media-item img {
-            width: 300px;
-            height: 170px;
-            object-fit: cover;
+            display: block;
+            max-width: 100%;
+            height: auto;
             border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -151,7 +155,7 @@
 
         <div class="section">
             <h2>Second Test Results</h2>
-            <p>During our second round of tests, the shaft and the nuts which were connecting the propeller and the motor were unreliable. Even with strengthened material and proper nut housing, the housings deformed during the test and obstructed the propeller from revolving smoothly. In order to tackle this issue, we decided to increase our nut surface area. This would inrcrease the surface area of both the houisng and the nuts. Thus, the pressure on the houisng will significantly decrease and the housing will not deform, leading to smooth rotation of propeller.</p>
+            <p>During our second round of tests, the shaft and the nuts which were connecting the propeller and the motor were unreliable. Even with strengthened material and proper nut housing, the housings deformed during the test and obstructed the propeller from revolving smoothly. In order to tackle this issue, we decided to increase our nut surface area. This would increase the surface area of both the housing and the nuts. Thus, the pressure on the housing will significantly decrease and the housing will not deform, leading to smooth rotation of propeller.</p>
         </div>
 
         <div class="media-row">
@@ -172,8 +176,9 @@
 
         <div class="section">
             <h2>Future Testing Plans</h2>
-            <p>Our next steps involve refining the electronic control system to ensure smooth operation of the stepper motor during pitch adjustments. Additionally, we will mount the propeller on linear motion bearings and use a brushless DC motor instead of a drill. We will measure the output rpm with a hall sensor and a magnet and we will measure the load the propeller creates with a load censor.</p>
+            <p>Our next steps involve refining the electronic control system to ensure smooth operation of the stepper motor during pitch adjustments. Additionally, we will mount the propeller on linear motion bearings and use a brushless DC motor instead of a drill. We will measure the output rpm with a hall sensor and a magnet and we will measure the load the propeller creates with a load sensor.</p>
         </div>
     </div>
 </body>
 </html>
+
