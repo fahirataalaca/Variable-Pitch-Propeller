@@ -50,19 +50,19 @@
 
         /* Removed borders/backgrounds around videos */
         .video-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            justify-items: center;
-            align-items: center;
-            margin: 30px auto;
-            width: 80%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 10px;
+            margin: 20px auto;
+            width: 100%;
         }
         .video-item {
             text-align: center;
         }
         .video-item video {
-            width: 100%; max-width: 200px;
+            width: 100%;
+            max-width: 200px;
             border-radius: 5px;
         }
 
@@ -131,14 +131,6 @@
         </div>
     </div>
 
-    <div class="section">
-        <h2>PCB Design and Production</h2>
-        <p>Coming soon</p>
-
-        <div class="image-row">
-            <img src="image1.jpg" alt="PCB image 1">
-            <img src="image2.jpg" alt="PCB image 2">
-            <img src="image3.jpg" alt="PCB image 3">
         </div>
             <div class="section">
             <h2>PCB Design and Production</h2>
@@ -152,4 +144,5 @@
     </div>
 </body>
 </html>
+
 
