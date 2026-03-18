@@ -4,137 +4,266 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Components</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
-            height: 100%;
-            overflow-y: auto; /* Ensures scrolling if content overflows */
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: Georgia, serif;
-            margin: 0;
-            padding: 0;
-            background-color: #34495e;
-            color: #10223b;
-            height: 100%;
-            overflow-y: auto; /* Enables vertical scrolling */
+            background-color: #f5f5dc;
+            font-family: Times New Roman, Times, serif;
+            font-size: 15px;
+            color: #111;
         }
 
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background: #d4dce2;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* ── TOP BLUE BANNER ── */
+        .banner {
+            background: #1a3a8f;
+            padding: 14px 20px 12px;
+            border-bottom: 3px solid #f5a800;
         }
 
-        .title {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            border-radius: 8px;
-            margin-bottom: 20px;
+        .banner h1 {
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            font-weight: bold;
         }
 
-        .title h1 {
-            font-family: 'Lato', sans-serif;
-        }
-
+        /* ── GREY NAV BAR ── */
         nav {
-            text-align: center;
-            margin-top: 20px;
-            background-color: #333000;
-            padding: 5px 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: #c0c0c0;
+            border-bottom: 2px solid #888;
+            border-top: 2px solid #e8e8e8;
+            padding: 4px 12px;
+            display: flex;
+            gap: 2px;
+            flex-wrap: wrap;
         }
 
         nav a {
-            margin: 0 15px;
-            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #00008b;
             text-decoration: none;
-            font-size: 14px;
-            transition: all 0.3s ease;
+            padding: 3px 10px;
+            background: #d4d0c8;
+            border-top: 2px solid #f0ece4;
+            border-left: 2px solid #f0ece4;
+            border-right: 2px solid #808080;
+            border-bottom: 2px solid #808080;
         }
 
         nav a:hover {
-            color: red;
-            font-size: 16px;
+            background: #c8c4bc;
+            color: #00008b;
+            border-top: 2px solid #808080;
+            border-left: 2px solid #808080;
+            border-right: 2px solid #f0ece4;
+            border-bottom: 2px solid #f0ece4;
         }
 
-        .horizontal-line {
-            text-align: center;
-            margin: 10px 0;
+        /* ── PAGE LAYOUT ── */
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 16px;
         }
 
-        .horizontal-line::before {
-            content: "_____________________________________________________________________________________________";
-            display: block;
-            text-align: center;
+        /* ── SECTION TITLE BARS ── */
+        .section-title {
+            background: #1a3a8f;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            margin-top: 22px;
+            border-left: 6px solid #f5a800;
         }
 
-        .section {
-            text-align: center;
-            padding: 1px;
+        .section-title:first-child { margin-top: 0; }
+
+        /* ── BODY TEXT ── */
+        .body-text {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #222;
+            margin-bottom: 14px;
+            padding: 0 4px;
         }
 
-        .section h2 {
-            font-size: 24px;
+        /* ── COMPONENTS TABLE ── */
+        .components-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-bottom: 14px;
         }
 
-        .section p {
-            font-size: 16px;
-            padding: 1px;
+        .components-table th {
+            background: #c0c0c0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            text-align: left;
+            padding: 5px 10px;
+            border: 1px solid #888;
+            border-top: 2px solid #f0ece4;
+            border-left: 2px solid #f0ece4;
+            border-right: 2px solid #808080;
+            border-bottom: 2px solid #808080;
         }
 
+        .components-table td {
+            padding: 6px 10px;
+            border: 1px solid #bbb;
+            vertical-align: top;
+            line-height: 1.6;
+            color: #222;
+        }
+
+        .components-table tr:nth-child(odd) td {
+            background: #fafaf0;
+        }
+
+        .components-table tr:nth-child(even) td {
+            background: #f0f0e0;
+        }
+
+        .components-table td:first-child {
+            font-weight: bold;
+            white-space: nowrap;
+            width: 220px;
+        }
+
+        /* ── HORIZONTAL RULE ── */
+        hr {
+            border: none;
+            border-top: 1px solid #aaa;
+            margin: 18px 0;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            background: #1a3a8f;
+            border-top: 3px solid #f5a800;
+            padding: 10px 20px;
+            margin-top: 24px;
+        }
+
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #ccd6f6;
+        }
+
+        .footer a {
+            color: #f5d060;
+            text-decoration: none;
+        }
+
+        .footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="title">
-            <h1>Project Components</h1>
-        </div>
 
-        <p class="horizontal-line"></p>
+    <!-- BLUE BANNER -->
+    <div class="banner">
+        <h1>Project Components</h1>
+    </div>
 
-        <nav>
-            <a href="design.html">Design Development</a> &vert;
-            <a href="components.html">Project Components</a> &vert;
-            <a href="testing.html">Prototype Testing</a> &vert;
-            <a href="document.html">Additional Information</a>
-        </nav>
+    <!-- GREY NAV -->
+    <nav>
+        <a href="design.html">Design Development</a>
+        <a href="components.html">Project Components</a>
+        <a href="testing.html">Prototype Testing</a>
+        <a href="document.html">Additional Information</a>
+    </nav>
 
-        <p class="horizontal-line"></p>
+    <!-- MAIN CONTENT -->
+    <div class="page">
 
-        <div class="section">
-            <h2>Key Components</h2>
-            <p>The following are the primary components used in our variable pitch propeller project:</p>
-            <ul>
-                <p><strong>Stepper Motor (NEMA 11)</strong> - The primary actuator for the propeller's pitch adjustment.</p>
-                <p><strong>DRV8825 Driver</strong> - Microstepping driver used to control the stepper motor with microsteps.</p>
-                <p><strong>Li-ion Batteries</strong> - Compact and rechargeable power source for the motor and electronics.</p>
-                <p><strong>XIAO ESP 32 C3</strong> - The microcontroller responsible for controlling the stepper motor.</p>
-                <p><strong>Custom PCB</strong> - The controller board responsible for controlling the stepper motor and receiveing data from the hall sensor. Used in the actual tests with the propeller.</p>
-                <p><strong>3D Printed Propeller</strong> - The propeller blades and housing designed using Fusion 360 and printed with PLA+ for durability.</p>
-                <p><strong>Brushed DC Motor</strong> - The motor responsible for spinning the propeller as a whole</p>
-                <p><strong>Waveshare 5 inch HTML Screen</strong> - The screen  responsible for displaying the RPM and theorethical thurst data in real time</p>
-                <p><strong>L298N DC Motor Driver</strong> - DC motor driver used to control the bruhsed DC motor.</p>
-                <p><strong>Rasberry Pi 4</strong> - Microcontroller responsible for controlling the DC motor driver, displayng data on the screen, and recieve data from ESP 32 C3.<><</p>
-                <p><strong>Hall Effect Sensor</strong> - Sensor that is responsible for the propeler rpm detection.</p>
-                <p><strong>Bearings</strong> - The bearings inside the propeller (608 ZZ) are curcial for smooth operations. The pillow stop bearings take the load off the DC motor and ensures that the propeller can spin smooth. </p>
-            </ul>
-        </div>
+        <div class="section-title">Key Components</div>
+        <table class="components-table">
+            <tr>
+                <th>Component</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Stepper Motor (NEMA 11)</td>
+                <td>The primary actuator for the propeller's pitch adjustment.</td>
+            </tr>
+            <tr>
+                <td>DRV8825 Driver</td>
+                <td>Microstepping driver used to control the stepper motor with microsteps.</td>
+            </tr>
+            <tr>
+                <td>Li-ion Batteries</td>
+                <td>Compact and rechargeable power source for the motor and electronics.</td>
+            </tr>
+            <tr>
+                <td>XIAO ESP32 C3</td>
+                <td>The microcontroller responsible for controlling the stepper motor.</td>
+            </tr>
+            <tr>
+                <td>Custom PCB</td>
+                <td>The controller board responsible for controlling the stepper motor and receiving data from the hall sensor. Used in the actual tests with the propeller.</td>
+            </tr>
+            <tr>
+                <td>3D Printed Propeller</td>
+                <td>The propeller blades and housing designed using Fusion 360 and printed with PLA+ for durability.</td>
+            </tr>
+            <tr>
+                <td>Brushed DC Motor</td>
+                <td>The motor responsible for spinning the propeller as a whole.</td>
+            </tr>
+            <tr>
+                <td>Waveshare 5" HDMI Screen</td>
+                <td>Displays the RPM and theoretical thrust data in real time.</td>
+            </tr>
+            <tr>
+                <td>L298N DC Motor Driver</td>
+                <td>DC motor driver used to control the brushed DC motor.</td>
+            </tr>
+            <tr>
+                <td>Raspberry Pi 4</td>
+                <td>Microcontroller responsible for controlling the DC motor driver, displaying data on the screen, and receiving data from the ESP32 C3.</td>
+            </tr>
+            <tr>
+                <td>Hall Effect Sensor</td>
+                <td>Sensor responsible for propeller RPM detection.</td>
+            </tr>
+            <tr>
+                <td>Bearings</td>
+                <td>The 608ZZ bearings inside the propeller are crucial for smooth operation. The pillow block bearings take the load off the DC motor and ensure the propeller spins smoothly.</td>
+            </tr>
+        </table>
 
-        <div class="section">
-            <h2>Additional Components</h2>
-            <p>Aluminium profiles, Rasberry Pi 4 protection and cooling box, sqaure 3 axis profile connectors, wires.</p>
-        </div>
+        <hr>
+
+        <div class="section-title">Additional Components</div>
+        <p class="body-text">
+            Aluminium profiles, Raspberry Pi 4 protection and cooling box, square 3-axis profile connectors, wires.
+        </p>
 
     </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="footer-inner">
+            <p>Variable Pitch Propeller Project &mdash; Hisar School</p>
+            <p>Contact: <a href="mailto:ata.alaca@hisarschool.k12.tr">ata.alaca@hisarschool.k12.tr</a></p>
+        </div>
+    </div>
+
 </body>
 </html>
-
