@@ -237,11 +237,33 @@
 
         <hr>
 
-        <div class="section-title">Step Motor System Development</div>
+        <div class="section-title">NEMA 17 Step Motor System Development</div>
+        <ol class="steps-list">
+            <li>The step motor must work</li>
+            <li>The Arduino must derive RPM data</li>
+            <li>RPM controls step motor position</li>
+        </ol>
+
+        <div class="video-grid">
+            <div class="video-item">
+                <h3>Step 1</h3>
+                <video src="Step1.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="video-item">
+                <h3>Step 2</h3>
+                <video src="RPMcount.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="video-item">
+                <h3>Step 3</h3>
+                <video src="Step4.mp4" autoplay loop muted playsinline></video>
+            </div>
+        </div>
+
+        <div class="section-title">NEMA 11 Step Motor System Development</div>
         <ol class="steps-list">
             <li>The step motor must work</li>
             <li>The hall sensor must detect magnetic fields</li>
-            <li>The Arduino must derive RPM data</li>
+            <li>The ESP32 must be able to adjust step motor position based off magnetic field presence.</li>
             <li>RPM controls step motor position</li>
         </ol>
 
@@ -268,9 +290,9 @@
 
         <div class="section-title">PCB Design and Production</div>
         <div class="image-row">
-            <img src="PCBSch.png" alt="Schematic">
-            <img src="PCBRed.png" alt="Gerber">
-            <img src="PCBRender.png" alt="3D Render">
+            <img src="pcbshcematic.png" alt="Schematic">
+            <img src="pcbself.png" alt="Gerber">
+            <img src="pcbinpropeller.jpeg" alt="PCB Placement in Propellerr">
         </div>
 
     </div>
