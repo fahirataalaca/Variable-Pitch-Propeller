@@ -4,174 +4,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prototype Testing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
-            height: 100%;
-            overflow-y: auto;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: Georgia, serif;
-            margin: 0;
-            padding: 0;
-            background-color: #34495e;
-            color: #10223b;
-            height: 100%;
-            overflow-y: auto;
+            background-color: #f5f5dc;
+            font-family: Times New Roman, Times, serif;
+            font-size: 15px;
+            color: #111;
         }
 
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background: #d4dce2;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* ── TOP BLUE BANNER ── */
+        .banner {
+            background: #1a3a8f;
+            padding: 14px 20px 12px;
+            border-bottom: 3px solid #f5a800;
         }
 
-        .title {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            border-radius: 8px;
-            margin-bottom: 20px;
+        .banner h1 {
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            font-weight: bold;
         }
 
-        .title h1 {
-            font-family: 'Lato', sans-serif;
-        }
-
+        /* ── GREY NAV BAR ── */
         nav {
-            text-align: center;
-            margin-top: 20px;
-            background-color: #333000;
-            padding: 5px 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: #c0c0c0;
+            border-bottom: 2px solid #888;
+            border-top: 2px solid #e8e8e8;
+            padding: 4px 12px;
+            display: flex;
+            gap: 2px;
+            flex-wrap: wrap;
         }
 
         nav a {
-            margin: 0 15px;
-            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #00008b;
             text-decoration: none;
-            font-size: 14px;
-            transition: all 0.3s ease;
+            padding: 3px 10px;
+            background: #d4d0c8;
+            border-top: 2px solid #f0ece4;
+            border-left: 2px solid #f0ece4;
+            border-right: 2px solid #808080;
+            border-bottom: 2px solid #808080;
         }
 
         nav a:hover {
-            color: red;
-            font-size: 16px;
+            background: #c8c4bc;
+            color: #00008b;
+            border-top: 2px solid #808080;
+            border-left: 2px solid #808080;
+            border-right: 2px solid #f0ece4;
+            border-bottom: 2px solid #f0ece4;
         }
 
-        .horizontal-line {
-            text-align: center;
-            margin: 10px 0;
+        /* ── PAGE LAYOUT ── */
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 16px;
         }
 
-        .horizontal-line::before {
-            content: "_____________________________________________________________________________________________";
-            display: block;
-            text-align: center;
+        /* ── SECTION TITLE BARS ── */
+        .section-title {
+            background: #1a3a8f;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            margin-top: 22px;
+            border-left: 6px solid #f5a800;
         }
 
-        .section {
-            text-align: center;
-            padding: 1px;
+        .section-title:first-child { margin-top: 0; }
+
+        /* ── BODY TEXT ── */
+        .body-text {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #222;
+            margin-bottom: 14px;
+            padding: 0 4px;
         }
 
-        .section h2 {
-            font-size: 24px;
+        /* ── HORIZONTAL RULE ── */
+        hr {
+            border: none;
+            border-top: 1px solid #aaa;
+            margin: 18px 0;
         }
 
-        .section p {
-            font-size: 16px;
-            padding: 1px;
-        }
-
+        /* ── MEDIA ROW ── */
         .media-row {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 20px;
+            align-items: flex-start;
+            gap: 12px;
             flex-wrap: wrap;
-            margin-bottom: 20px;
+            margin: 14px 0;
         }
 
-        video, img {
-            border-radius: 8px;
+        .media-row video,
+        .media-row img {
+            border: 1px solid #888;
+            display: block;
+            max-width: 100%;
         }
 
-        img {
-            max-width: 480px;
-            max-height: 270px;
-            width: auto;
+        .media-row video {
+            width: 380px;
             height: auto;
         }
+
+        .media-row img {
+            max-width: 380px;
+            height: auto;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            background: #1a3a8f;
+            border-top: 3px solid #f5a800;
+            padding: 10px 20px;
+            margin-top: 24px;
+        }
+
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #ccd6f6;
+        }
+
+        .footer a {
+            color: #f5d060;
+            text-decoration: none;
+        }
+
+        .footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="title">
-            <h1>Prototype Testing</h1>
+
+    <!-- BLUE BANNER -->
+    <div class="banner">
+        <h1>Prototype Testing</h1>
+    </div>
+
+    <!-- GREY NAV -->
+    <nav>
+        <a href="design.html">Design Development</a>
+        <a href="components.html">Project Components</a>
+        <a href="testing.html">Prototype Testing</a>
+        <a href="index.html">Main Page</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="page">
+
+        <div class="section-title">Test Overview</div>
+        <p class="body-text">
+            The testing phase of the project focuses on evaluating the functionality of the variable pitch propeller under controlled conditions. This includes spinning the propeller with a drill at 200rpm currently. After we reach success in the first step, we will mount the propeller on linear motion bearings and use a brushless DC motor instead of a drill. We will measure the output rpm with a hall sensor and a magnet, and we will measure the load the propeller creates with a load sensor.
+        </p>
+
+        <hr>
+
+        <div class="section-title">First Test Results</div>
+        <p class="body-text">
+            During our first round of tests, the propeller broke due to structural issues. Material choice for the housing was wrong. We switched from PLA filament to PLA+ and strengthened our design. After switching to PLA+ filament and reinforcing the design, the results showed significant improvements in both strength and performance.
+        </p>
+
+        <div class="media-row">
+            <video width="380" muted autoplay loop>
+                <source src="VID-20250330-WA0081.mp4" type="video/mp4">
+            </video>
+            <img src="IMG-20250330-WA0035.jpg" alt="First test">
         </div>
 
-        <p class="horizontal-line"></p>
+        <hr>
 
-        <nav>
-            <a href="design.html">Design Development</a> &vert;
-            <a href="components.html">Project Components</a> &vert;
-            <a href="testing.html">Prototype Testing</a> &vert;
-            <a href="index.html">Main Page</a>
-        </nav>
+        <div class="section-title">Second Test Results</div>
+        <p class="body-text">
+            During our second round of tests, the shaft and the nuts connecting the propeller and the motor were unreliable. Even with strengthened material and proper nut housing, the housings deformed during the test and obstructed the propeller from revolving smoothly. In order to tackle this issue, we decided to optimize the weight distribution in the propeller and include a large 3D printed bearing on the propeller housing to smooth the turning of the propeller.
+        </p>
 
-        <p class="horizontal-line"></p>
-
-        <div class="section">
-            <h2>Test Overview</h2>
-            <p>The testing phase of the project focuses on evaluating the functionality of the variable pitch propeller under controlled conditions. This includes spinning the propeller with a drill at 200rpm for currently. After we reach success in the first step, we will mount the propeller on linear motion bearings and use a brushless DC motor instead of a drill. We will measure the output rpm with a hall sensor and a magnet and we will measure the load the propeller creates with a load sensor.</p>
+        <div class="media-row">
+            <video width="380" muted autoplay loop>
+                <source src="20250424_144106.mp4" type="video/mp4">
+            </video>
+            <video width="380" muted autoplay loop>
+                <source src="20250424_143940.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="media-row">
+            <img src="20250502_223718.jpg" alt="Second test detail">
         </div>
 
-        <div class="section">
-            <h2>First Test Results</h2>
-            <p>During our first round of tests, the propeller broke due to structural issues due. Material choice for the housing wrong. We switched from PLA filament to PLA+ and strengthtend our design. After switching to PLA+ filament and reinforcing the design, the results showed significant improvements in both strength and performance.</p>
-        </div>
+        <hr>
 
-        <div class="section">
-            <div class="media-row">
-                <video width="480" height="270" muted autoplay loop>
-                    <source src="VID-20250330-WA0081.mp4" type="video/mp4">
-                </video>
-                <img src="IMG-20250330-WA0035.jpg">
-            </div>
-        </div>
+        <div class="section-title">Future Testing Plans</div>
+        <p class="body-text">
+            Our next steps involve refining the BLDC control system to ensure smooth operation of the propeller. Additionally, we will mount the propeller on linear motion bearings to decrease friction and acquire maximum thrust. We will measure the load the propeller creates with a load sensor and plot a graph in order to determine the most efficient angle of attack of the propeller blades at specific RPM values.
+        </p>
 
-        <div class="section">
-            <h2>Second Test Results</h2>
-            <p>During our second round of tests, the shaft and the nuts which were connecting the propeller and the motor were unreliable. Even with strengthened material and proper nut housing, the housings deformed during the test and obstructed the propeller from revolving smoothly. In order to tackle this issue, we decided to optimize the weight distrubution in the propeller and include a large 3D printed bearing on the propeller housing to smoothen the turning of the propeller..</p>
-        </div>
+    </div>
 
-        <div class="section">
-            <div class="media-row">
-                <video width="480" height="270" muted autoplay loop>
-                    <source src="20250424_144106.mp4" type="video/mp4">
-                </video>
-                <video width="480" height="270" muted autoplay loop>
-                    <source src="20250424_143940.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="media-row" style="justify-content: center;">
-                <img src="20250502_223718.jpg">
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Future Testing Plans</h2>
-            <p>Our next steps involve refining the BLDC control system to ensure smooth operation of the propeller. Additionally, we will mount the propeller on linear motion bearings to decrease friction during operation of the propeller and acquire most thrust. We will measure the load the propeller creates with a load censor and make a graph in order to acheive the most efficent angle of attack of the propeller blades during specific propeller rpm.</p>
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="footer-inner">
+            <p>Variable Pitch Propeller Project &mdash; Hisar School</p>
+            <p>Contact: <a href="mailto:ata.alaca@hisarschool.k12.tr">ata.alaca@hisarschool.k12.tr</a></p>
         </div>
     </div>
+
 </body>
 </html>
-
