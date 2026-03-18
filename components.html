@@ -75,10 +75,21 @@
             font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
             font-weight: bold;
-            padding: 5px 10px;
+            padding: 5px 10px 5px 16px;
             margin-bottom: 10px;
             margin-top: 22px;
-            border-left: 6px solid #f5a800;
+            border-left: none;
+            position: relative;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 6px;
+            background: linear-gradient(to right, #0a1f5c, #2a4faf);
+            border-left: 2px solid #4060c0;
+            border-right: 2px solid #0a1a50;
         }
 
         .section-title:first-child { margin-top: 0; }
@@ -186,7 +197,7 @@
         <a href="design.html">Design Development</a>
         <a href="components.html">Project Components</a>
         <a href="testing.html">Prototype Testing</a>
-        <a href="index.html">Main Page</a>
+        <a href="document.html">Additional Information</a>
     </nav>
 
     <!-- MAIN CONTENT -->
@@ -261,9 +272,4 @@
     <div class="footer">
         <div class="footer-inner">
             <p>Variable Pitch Propeller Project &mdash; Hisar School</p>
-            <p>Contact: <a href="mailto:ata.alaca@hisarschool.k12.tr">ata.alaca@hisarschool.k12.tr</a></p>
-        </div>
-    </div>
-
-</body>
-</html>
+            <p>Contact: <a href="/cdn-cgi/l/email-protection#523326337c333e333133123a3b21332021313a3d3d3e7c3963607c2620"><span class="__cf_email__" da
